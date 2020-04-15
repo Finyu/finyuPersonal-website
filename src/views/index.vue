@@ -36,8 +36,9 @@
           {{item}}
         </span>
       </p>
-      <p v-if='showType == "resume"' @click='$message.info("还没准备好呢")'>点击下载我的简历</p>
+      <p v-if='showType == "resume"' @click='resume'>点击下载我的简历</p>
       <p v-if='showType == "tool"' @click='window.open("http://www3.love614.live")'>转调器</p>
+      <p v-if='showType == "tool"' @click='downLoad("vue")'>vue源码下载(学习备注)</p>
       <p v-if='showType == "game"' @click='showGameCat'>抓住神经猫</p>
       <div v-show='showType == "Harmonica"' style='position: relative;top: 20px;'>
         <el-scrollbar style='height: 300px;'>
@@ -146,10 +147,6 @@ export default {
       ],
       readMe: [
         {
-          text: '笔记',
-          click: function() { this.$message.info("笔记还在写呢") } 
-        },
-        {
           text: '小游戏',
           click: function() { this.show("game") } 
         },
@@ -163,10 +160,11 @@ export default {
         },
         {
           text: '组件/方法库',
-          click: function() { window.open("http://www2.love614.live/#/zh-CN/component/fetch") } 
+          click: () => this.showMessage('主人的个人库重构中，预计2020-4-25左右重构完毕~', 4000, 9)
+          // click: function() { window.open("http://www2.love614.live/#/zh-CN/component/fetch") } 
         },
         {
-          text: '写的一些工具',
+          text: '工具箱',
           click: function() { this.show("tool") } 
         },
         {
@@ -202,6 +200,13 @@ export default {
       'getNum',
       'addNum'
     ]),
+    resume(){
+      if (window.location.hash.indexOf('downloadresume') > -1) {
+        this.downLoad('resume')
+      } else {
+        this.$message.info("暗号错误!")
+      }
+    },
     show(val){
       let text = '点一下头像就可以返回主目录哦~'
       if (val == 'Harmonica') text = '主人吹口琴超好听的说'
