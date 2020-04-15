@@ -1,0 +1,429 @@
+// 全局样式
+.main-warp
+  height 100%
+  width 100%
+  padding 0 20px 20px 20px
+  .main-content
+    height 100%
+    width 100%
+    display flex
+    flex-direction column
+  .content-header
+    width 100%
+    padding-left 20px
+  .content-header-title
+    height 40px
+    display flex
+    align-items center
+    .content-header-indicator
+      width 18px
+      height 18px
+      border-radius 50%
+      background #df7026
+      margin-right 5px
+    span
+      font-size 18px
+  .content-header-query
+    // display flex
+    min-height 50px
+    justify-content space-between
+    padding-right 20px
+    align-items center
+    .el-form
+      display inline-block
+    .search-btn
+      float right
+    .button-group
+      min-width 288px
+      margin 20px 0px 20px
+    .mt0
+      margin-top 0 !important
+  .content-body
+    overflow-y auto
+    flex 1
+  .content-bottom-paging
+    display flex
+    min-height 75px
+    align-items center
+    justify-content space-around
+    flex-wrap wrap
+.common-bg
+    background #0f4d44
+// 表单样式
+.common-search-form
+  .el-form-item__label
+    color #fff
+  .el-form-item
+    margin 10px 20px 0px 0
+.common-data-form
+  .el-form-item__label
+    color #fff
+  .el-form-item
+    margin 0 30px 20px 0
+// 按钮样式
+.common-button
+  &:focus
+  &:hover
+    background none
+    border-color #df7026
+    color #df7026
+  height 30px
+  border 1px #33a596 solid
+  background none
+  box-shadow inset 0px 0px 5px 1px #3c776f
+  font-size 14px
+  color #fff
+  padding 1px 6px
+// 日期选择框
+.common-date-picker
+  &:hover .el-input__inner
+    border-color #df7026
+  // width 135px !important
+  .el-input__inner
+    height 30px
+    border 1px #33a596 solid
+    background none
+    box-shadow inset 0px 0px 5px 1px #3c776f
+    font-size 14px
+    color #fff
+// input样式
+.common-select
+.common-input
+  width 135px
+  // input 鼠标经过样式
+  &:hover .el-input__inner
+    border-color #df7026
+    color #df7026
+  // input 获取焦点样式
+  .el-input__inner:focus
+  .el-input.is-focus .el-input__inner
+    border-color #33a596
+  // input全局样式
+  .el-input__inner
+    height 30px
+    border 1px #33a596 solid
+    background none
+    box-shadow inset 0px 0px 5px 1px #3c776f
+    font-size 14px
+    color #fff
+// 下拉列表
+.el-select-dropdown
+  background #239383
+  border-color #239383
+  margin 0 !important
+  .el-select-dropdown__item 
+  .hover
+    color #fff
+  .popper__arrow
+    display none
+  .el-select-dropdown__item
+    background-color #239383
+  .el-select-dropdown__empty
+    color #fff
+  .el-select-dropdown__wrap
+  .el-scrollbar__wrap
+  .el-select-dropdown
+  .el-popper
+    margin-bottom 0 !important
+// 时间选择器
+.el-picker-panel el-date-picker 
+.el-popper
+  background #239383
+  border-color #239383
+  color #fff
+  .time-select-item:hover
+    background #df7026
+    color #fff
+  .popper__arrow
+    display none
+  .el-date-table td.today span
+    color #df7026
+  .el-date-table td.available
+    &:hover
+      color #df7026
+  .el-date-table td.current
+    &:not(.disabled)
+      span
+        color #fff
+        background #df7026
+  .el-picker-panel__footer
+    background #239383
+  .el-button--text
+    color #fff
+  .el-button+.el-button
+    height 30px
+    padding 1px 15px
+    background #26c6af
+    color #fff
+    border 0
+    font-size 16px
+    &:hover
+    &:focus
+      background #26c6af
+      color #fff
+  .el-input--small .el-input__inner
+    border 1px #33a596 solid
+    background none
+    box-shadow inset 0px 0px 5px 1px #3c776f
+    color #fff
+  .el-date-table
+    th
+      color #fff
+  .el-date-picker__header
+    button
+    span
+      color #fff
+  .el-date-table__row
+    .disabled
+      div
+        background-color #C0C4CC !important
+        color #fff !important
+.el-time-panel__btn
+.el-time-panel__btn.confirm
+  color #fff
+.el-time-spinner__item.active:not(.disabled)
+  color #fff
+.el-time-spinner__item:hover:not(.disabled):not(.active)
+  background #df7026
+  color #fff
+// 表格样式
+.common-table
+  // 复选框样式
+  .el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner
+      background-color #df7026
+      border-color #df7026
+  .el-table__body tr.current-row>td
+    background #0f4d44
+    color #df7026
+  // 表格滚动条样式
+  .el-table__body-wrapper::-webkit-scrollbar
+    width 10px
+    height 10px
+  .el-table__body-wrapper::-webkit-scrollbar-thumb
+    opacity 1
+    background-color #199381
+    border-radius 5px
+    // 鼠标经过样式
+    &:hover
+      background-color #df7026
+  background none !important
+  .el-table__body tr:hover>td
+    background-color #0f4d44
+    color #df7026
+  .el-table__row--striped tr
+    &:hover
+      td
+        color #df7026
+  // 表格头部样式
+  .el-table__header-wrapper
+  .el-table__header
+  .has-gutter
+  th
+    border-bottom 1px solid #1cad98 !important
+    background #1cad98 !important
+    color #fff
+    font-size 16px
+  // 表格单数行样式
+  .el-table__row
+    td
+      border-bottom 1px solid #0f4d44
+      background #0f4d44
+      color #fff
+      font-size 16px
+  // 表格双数行样式
+  .el-table__row--striped
+    td
+      border-bottom 1px solid #116a5d !important
+      background #116a5d !important
+  // 去掉表格底线
+  &::before
+    display none
+// 分页样式
+.common-pagination
+  display flex
+  align-items center
+  .el-pagination__total
+  .el-pagination__jump
+    color #fff
+  .el-pager li.active
+    color #df7026 !important
+  .el-select .el-input__inner
+    &:focus
+      border-color #df7026
+  .el-pagination__sizes .el-input .el-input__inner
+    &:hover
+      border-color #df7026
+  .el-input__inner
+    border 1px #33a596 solid
+    background none
+    box-shadow inset 0px 0px 5px 1px #3c776f
+    font-size 14px
+    color #fff
+  .el-pager
+    li
+      box-shadow inset 0px 0px 5px 1px #3c776f
+      border 1px #33a596 solid
+      background none
+      color #fff
+  .btn-prev
+  .btn-next
+  .el-pagination button:disabled
+    background none !important
+    color #fff !important
+// 下拉列表选中后字体颜色
+.el-select-dropdown__item.selected
+  color #df7026
+// 弹窗样式
+.common-dialog
+  .el-dialog__header
+    padding-left 60px
+    padding-top 20px
+  .el-dialog__body
+    padding-left 60px
+    padding-top 20px
+  .el-dialog
+    border-radius 0
+    background rgba(8,76,66,0.8)
+    border 1px #53b2aa solid
+    box-shadow inset 0px 0px 10px 5px #53807e
+    font-size 14px
+    color #fff
+    &::after
+      content ''
+      width 20px
+      height 20px
+      border-bottom 2px solid #82eadc
+      border-right 2px solid #82eadc
+      position absolute
+      bottom -1px
+      right -1px
+    &::before
+      content ''
+      width 20px
+      height 20px
+      border-bottom 2px solid #82eadc
+      border-left 2px solid #82eadc
+      position absolute
+      bottom -1px
+      left -1px
+    .el-dialog__header
+      &::after
+        content ''
+        width 20px
+        height 20px
+        border-top 2px solid #82eadc
+        border-right 2px solid #82eadc
+        position absolute
+        top -1px
+        right -1px
+      &::before
+        content ''
+        width 20px
+        height 20px
+        border-top 2px solid #82eadc
+        border-left 2px solid #82eadc
+        position absolute
+        top -1px
+        left -1px
+  .el-dialog__header
+    .el-dialog__title
+      font-size 24px
+      color #fff
+  .el-dialog__headerbtn
+    position absolute
+    top 10px
+    right 15px
+    width 29px
+    height 29px
+  .el-dialog__close
+    background url('../assets/images/close_icon.png')
+    width 29px
+    height 29px
+  .el-icon-close
+    &:before
+      content ''
+      background none !important
+// 弹窗按钮样式
+.common-dialog-button
+  height 30px
+  padding 1px 15px
+  background #26c6af
+  color #fff
+  border 0
+  font-size 16px
+  &:hover
+  &:focus
+    background #26c6af
+    color #fff
+// 主弹窗样式
+.common-main-dialog
+  .el-dialog
+    border-radius 0
+    background rgb(8,76,66)
+    border 2px #53b2aa solid
+    box-shadow inset 0px 0px 10px 5px #53807e
+    font-size 14px
+    color #fff
+    width 100% !important
+    height 100%
+    margin 0 0 0 0 !important
+    box-sizing border-box
+  .el-dialog__header
+    padding-left 50px
+    padding-top 20px
+    .el-dialog__title
+      color #fff
+  .el-dialog__body
+    padding 0 50px 20px
+  .el-dialog__headerbtn
+    position absolute
+    top 10px
+    right 15px
+    width 29px
+    height 29px
+  .el-dialog__close
+    background url('../assets/images/close_icon.png')
+    width 29px
+    height 29px
+  .el-icon-close
+    &:before
+      content ''
+      background none !important
+.el-scrollbar__wrap
+  overflow-x auto
+// 公共的树
+.common-tree
+  color #fff
+  background none
+  .el-tree-node:focus>.el-tree-node__content
+  .is-current
+    color  red
+  .is-focusable
+    background none !important
+  .el-tree-node__content
+    &:hover
+      background none
+  .el-tree-node__label
+    padding-left 10px
+  .el-checkbox__inner
+    background none
+  .el-checkbox__input.is-checked .el-checkbox__inner
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner
+    background-color #da7449
+    border-color #da7449
+  .el-checkbox__inner:hover
+  .el-checkbox__input.is-focus .el-checkbox__inner
+    border-color #da7449
+// tab 切换
+.common-tabs
+  .el-tabs__item
+    color #fff
+  .el-tabs__item:hover
+  .is-active
+    color #df7026 !important
+  .el-tabs__active-bar
+    background-color #df7026 !important
+
+// 联级选择器
+.el-cascader-menu
+  color #fff

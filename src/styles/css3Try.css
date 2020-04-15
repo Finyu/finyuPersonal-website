@@ -1,0 +1,139 @@
+.shadowBox {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: inset 0.5em -0.5em #f7efab;
+  animation: spin2 2s linear infinite;
+  animation-delay: 8s;
+}
+
+.shadowBox::before, .shadowBox::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  overflow: inherit;
+  background: inherit;
+  border-radius: inherit;
+  animation: spin1 8s linear  both;
+  animation-delay: 2s;
+}
+
+.shadowBox::before {
+  filter: blur(5px);
+}
+
+.shadowBox::after {
+  filter: blur(10px);
+}
+
+@keyframes spin1 {
+  form {
+    box-shadow: inset 0em 0em #f7efab;
+  }
+  to {
+    box-shadow: inset 0.5em -0.5em #f7efab;
+  }
+}
+
+@keyframes spin2 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.my-introduce {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.my-introduce span {
+  animation: introduce 0.8s ease-out both;
+}
+
+@keyframes introduce {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.href-z {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
+}
+
+.href-z span {
+  animation: introduce2 1s ease-out both;
+}
+
+.href-z::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, #f7efab);
+  animation: hrefZ 5s linear both;
+  animation-delay: inherit;
+}
+
+@keyframes hrefZ {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes introduce2 {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.indexBox-z1 {
+  overflow: hidden;
+}
+
+.showBrAni {
+  position: relative;
+}
+
+.showBrAni::before {
+  content: '';
+  width: 2px;
+  right: 0;
+  top: 0;
+  background: linear-gradient(transparent, #f7efab, #f7efab, #f7efab);
+  position: absolute;
+  animation: flow 5s ease-out;
+  animation-delay: 2.5s;
+}
+
+@keyframes flow {
+  from {
+    height: 0;
+  }
+  to {
+    height: 150%;
+  }
+}

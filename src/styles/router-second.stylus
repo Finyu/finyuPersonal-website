@@ -1,0 +1,13 @@
+.router-second-wrap
+  width 100%
+  height 100%
+  display flex
+  .common-left-nav
+    width 200px
+    height 100%
+    .common-left-list
+      width 100%
+      height 100% 
+  .common-right-content
+    // flex 1
+    width calc(100% - 200px)
