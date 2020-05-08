@@ -160,8 +160,8 @@ export default {
         },
         {
           text: '组件/方法库',
-          click: () => this.showMessage('主人的个人库重构中，预计2020-4-25左右重构完毕~', 4000, 9)
-          // click: function() { window.open("http://www2.love614.live/#/zh-CN/component/fetch") } 
+          // click: () => this.showMessage('主人的个人库重构中，预计2020-4-25左右重构完毕~', 4000, 9)
+          click: function() { window.open("http://www2.love614.live/") } 
         },
         {
           text: '工具箱',
